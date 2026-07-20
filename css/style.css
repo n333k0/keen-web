@@ -337,16 +337,8 @@ p { margin: 0; }
 }
 .hero__pane--dark { background: var(--bg); }
 .hero__pane--lime {
-  background:
-    radial-gradient(120% 120% at 78% 18%, #d2ff6a 0%, var(--lime) 46%, #a9e638 100%);
+  background: url("../assets/hero-ui-anim-bg.jpg") center / cover no-repeat;
   border-left: 1px solid #0d0d0d1a;
-}
-.hero__pane--lime::before {
-  /* soft desktop-wallpaper depth behind the floating window */
-  content: "";
-  position: absolute; inset: 0;
-  background: radial-gradient(60% 50% at 62% 30%, #ffffff40, transparent 70%);
-  mix-blend-mode: soft-light;
 }
 
 .hero__inner { position: relative; z-index: 1; }
@@ -404,7 +396,7 @@ p { margin: 0; }
     margin: 8px -20px 0;
     min-height: 640px;
     padding: 0;
-    background: radial-gradient(130% 80% at 70% 12%, #d2ff6a 0%, var(--lime) 52%, #a9e638 100%);
+    background: url("../assets/hero-ui-anim-bg.jpg") center / cover no-repeat;
   }
 }
 
@@ -990,6 +982,9 @@ p { margin: 0; }
 }
 .wall__cell .glyph svg { width: 100%; height: 100%; }
 
+/* The logo wall is the visual end of this section; don't leave a trailing panel below it. */
+#integrations { padding-bottom: 0; }
+
 /* ---------- Two-column section ---------- */
 .split {
   display: grid;
@@ -1246,6 +1241,29 @@ p { margin: 0; }
 }
 @media (max-width: 720px) { .cta-box { padding: 40px 24px; } }
 
+#early-access .cta-box {
+  align-items: center;
+  text-align: center;
+}
+.early-access__features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 28px;
+  width: min(100%, 680px);
+  margin: 8px auto 20px;
+}
+.early-access__features li {
+  justify-content: center;
+  text-align: left;
+}
+#early-access .price-row { justify-content: center; }
+#early-access .price-row__note { text-align: center; }
+#early-access .hero__ctas { justify-content: center; }
+#early-access .hero__micro { justify-content: center; }
+@media (max-width: 720px) {
+  .early-access__features { grid-template-columns: 1fr; }
+}
+
 /* ---------- Footer ---------- */
 .footer { padding: 72px 0 40px; border-top: 1px solid var(--line); }
 .footer__grid {
@@ -1292,11 +1310,11 @@ p { margin: 0; }
 /* ---------- Marquee ---------- */
 .marquee {
   position: relative;
-  z-index: 3;                 /* sit above the site-frame lines so they don't cross the strip */
+  z-index: 70;
   border-bottom: 1px solid var(--line);
   border-top: 1px solid var(--line);
   overflow: hidden;
-  background: #0a0a0a;
+  background: transparent;
 }
 .marquee__track {
   display: inline-flex; gap: 48px;
@@ -1772,7 +1790,7 @@ p { margin: 0; }
 
 /* ---------- Marquee (sits under the lime hero, dark strip) ---------- */
 .marquee--ink {
-  background: var(--bg);
+  background: transparent;
   color: var(--text-3);
 }
 

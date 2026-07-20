@@ -1242,13 +1242,13 @@ p { margin: 0; }
 .cta-box {
   border: 1px solid var(--line);
   border-radius: var(--r-2xl);
-  padding: 64px 48px;
-  background: linear-gradient(180deg, #101216, #0d0f0a);
+  padding: 32px;
+  background: transparent;
   display: flex; flex-direction: column; align-items: flex-start; gap: 20px;
   width: 100%;
   margin-inline: auto;
 }
-@media (max-width: 720px) { .cta-box { padding: 40px 24px; } }
+@media (max-width: 720px) { .cta-box { padding: 20px; } }
 
 #early-access .cta-box {
   align-items: center;

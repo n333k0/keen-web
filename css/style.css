@@ -1054,28 +1054,28 @@ p { margin: 0; }
 }
 @media (max-width: 860px) { .mission-grid { grid-template-columns: 1fr; } }
 .mission {
-  background: var(--bg-2);
+  background: transparent;
   border: 1px solid var(--line);
   border-radius: var(--r-xl);
   padding: 24px;
   display: flex; flex-direction: column; gap: 14px;
   min-height: 320px;
 }
-.mission--keen { border-color: var(--lime); background: var(--lime); color: #0d0d0d; }
+.mission--keen { border-color: var(--lime); background: transparent; color: var(--text); }
 .mission__label {
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--text-3);
 }
-.mission--keen .mission__label { color: #0d0d0d; opacity: 0.65; }
+.mission--keen .mission__label { color: var(--lime); opacity: 1; }
 .mission__title { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -0.015em; }
-.mission--keen .mission__title { color: #0d0d0d; }
+.mission--keen .mission__title { color: var(--text); }
 .mission__list { display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; color: var(--text-2); }
-.mission--keen .mission__list { color: #0d0d0de0; }
+.mission--keen .mission__list { color: var(--text-2); }
 .mission__list li { display: flex; gap: 10px; align-items: flex-start; line-height: 1.45; }
 .mission__list li::before {
   content: ""; width: 5px; height: 5px; background: var(--text-3); border-radius: 1px; margin-top: 8px; flex: none;
 }
-.mission--keen .mission__list li::before { background: #0d0d0d; }
+.mission--keen .mission__list li::before { background: var(--lime); }
 .mission__next {
   margin-top: auto;
   padding: 12px 14px;
@@ -1085,12 +1085,12 @@ p { margin: 0; }
   font-family: var(--mono); font-size: 11.5px; color: var(--text-2); line-height: 1.5;
 }
 .mission--keen .mission__next {
-  background: #0d0d0d0d;
-  border-color: #0d0d0d33;
-  color: #0d0d0d;
+  background: transparent;
+  border-color: var(--lime-line);
+  color: var(--text-2);
 }
 .mission__next b { color: var(--lime); font-weight: 500; }
-.mission--keen .mission__next b { color: #0d0d0d; }
+.mission--keen .mission__next b { color: var(--lime); }
 .mission__note { font-size: 13px; color: var(--text-3); font-style: italic; margin-top: auto; }
 
 /* ---------- Re-entry card ---------- */

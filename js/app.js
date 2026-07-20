@@ -298,6 +298,28 @@
     setInterval(() => { i = (i + 1) % DESK.length; apply(i); }, DESK_MS);
   }
 
+  function initDeskClock() {
+    const clock = document.querySelector("[data-desk-clock]");
+    if (!clock) return;
+
+    const formatter = new Intl.DateTimeFormat([], {
+      hour: "numeric",
+      minute: "2-digit",
+    });
+    const update = () => {
+      const now = new Date();
+      clock.textContent = formatter.format(now);
+      clock.dateTime = now.toISOString();
+    };
+
+    update();
+    const untilNextMinute = 60_000 - (Date.now() % 60_000);
+    setTimeout(() => {
+      update();
+      setInterval(update, 60_000);
+    }, untilNextMinute);
+  }
+
   /* --------------------------------------------------------
      3. FAQ accordion
   -------------------------------------------------------- */
@@ -401,6 +423,7 @@
       if (el.dataset.pillar === "attentive") pillarLoop(el, "attentive");
     });
     initDesk();
+    initDeskClock();
     document.querySelectorAll("[data-mock]").forEach(initDemo); // additional scenes (transformation)
     initFaq();
     initReveal();

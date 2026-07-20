@@ -1137,13 +1137,15 @@ p { margin: 0; }
 .attn-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border-top: 1px solid var(--line);
-  margin-right: -1px;   /* clip the redundant right-edge divider */
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
 }
 @media (max-width: 760px) { .attn-grid { grid-template-columns: 1fr; } }
 .attn {
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  background: var(--bg);
   padding: 28px;
   display: flex; flex-direction: column; gap: 12px;
   min-height: 200px;
@@ -1253,7 +1255,10 @@ p { margin: 0; }
 #early-access .cta-box {
   align-items: center;
   text-align: center;
+  padding: 44px 40px;   /* more vertical breathing room inside the block */
 }
+/* pull the block up close to the frame lines — top gap ≈ side gap */
+#pricing.section--normal { padding-top: 44px; padding-bottom: 44px; }
 .early-access__features {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1361,11 +1366,15 @@ p { margin: 0; }
 /* ---------- Audience card ---------- */
 .aud-grid {
   display: grid; grid-template-columns: repeat(2, 1fr);
-  border-top: 1px solid var(--line); border-left: 1px solid var(--line);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
 }
 @media (max-width: 760px) { .aud-grid { grid-template-columns: 1fr; } }
 .aud {
-  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  background: var(--bg);
   padding: 32px 28px;
   display: flex; flex-direction: column; gap: 12px;
   min-height: 200px;
@@ -1824,7 +1833,7 @@ p { margin: 0; }
   z-index: 0;
 }
 .cta-lime__bg .eye__cell { opacity: 0; }
-.cta-lime__eye, .cta-lime__eye.eye { color: #0d0d0d; }
+.cta-lime__eye, .cta-lime__eye.eye { color: #0d0d0d; gap: 2.7%; }  /* tighter squares (−70% gap) */
 .cta-lime__eye { transform: none; }
 @media (max-width: 1080px) {
   .cta-lime {

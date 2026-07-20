@@ -1851,6 +1851,14 @@ p { margin: 0; }
     transform: none;
     margin: 7vw auto 0;   /* top air == side air == bottom air */
     width: min(86vw, 540px);
+    aspect-ratio: 1.69;   /* crop the eye box to its visible (lit) rows */
+    height: auto;
+    overflow: hidden;
+  }
+  /* the eye grid stays square; shift it up so its lit middle rows fill the crop */
+  .cta-lime__eye {
+    width: 100%; height: auto; aspect-ratio: 1;
+    margin-top: -20.6%;
   }
 }
 @media (max-width: 720px) {

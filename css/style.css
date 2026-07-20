@@ -1034,16 +1034,17 @@ p { margin: 0; }
   display: flex; flex-direction: column; gap: 8px;
 }
 @media (max-width: 760px) { .compare__cell { border-right: none; } }
-.compare__cell--keen { background: #10130a; }
+.compare__cell--keen { background: transparent; color: var(--text); }
 .compare__label {
   font-family: var(--mono);
   font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--text-3);
   display: inline-flex; align-items: center; gap: 8px;
 }
-.compare__cell--keen .compare__label { color: var(--lime); }
+.compare__cell--keen .compare__label { color: var(--lime); opacity: 1; }
 .compare__text { font-size: 17px; line-height: 1.45; letter-spacing: -0.015em; }
 .compare__cell:first-child .compare__text { color: var(--text-2); }
+.compare__cell--keen .compare__text { color: var(--text); }
 
 /* ---------- Mission card (before/after) ---------- */
 .mission-grid {
@@ -1060,19 +1061,21 @@ p { margin: 0; }
   display: flex; flex-direction: column; gap: 14px;
   min-height: 320px;
 }
-.mission--keen { border-color: var(--lime-line); background: linear-gradient(180deg, #14170a, #111216); }
+.mission--keen { border-color: var(--lime); background: var(--lime); color: #0d0d0d; }
 .mission__label {
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--text-3);
 }
-.mission--keen .mission__label { color: var(--lime); }
+.mission--keen .mission__label { color: #0d0d0d; opacity: 0.65; }
 .mission__title { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -0.015em; }
+.mission--keen .mission__title { color: #0d0d0d; }
 .mission__list { display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; color: var(--text-2); }
+.mission--keen .mission__list { color: #0d0d0de0; }
 .mission__list li { display: flex; gap: 10px; align-items: flex-start; line-height: 1.45; }
 .mission__list li::before {
   content: ""; width: 5px; height: 5px; background: var(--text-3); border-radius: 1px; margin-top: 8px; flex: none;
 }
-.mission--keen .mission__list li::before { background: var(--lime); }
+.mission--keen .mission__list li::before { background: #0d0d0d; }
 .mission__next {
   margin-top: auto;
   padding: 12px 14px;
@@ -1081,7 +1084,13 @@ p { margin: 0; }
   border-radius: var(--r-md);
   font-family: var(--mono); font-size: 11.5px; color: var(--text-2); line-height: 1.5;
 }
+.mission--keen .mission__next {
+  background: #0d0d0d0d;
+  border-color: #0d0d0d33;
+  color: #0d0d0d;
+}
 .mission__next b { color: var(--lime); font-weight: 500; }
+.mission--keen .mission__next b { color: #0d0d0d; }
 .mission__note { font-size: 13px; color: var(--text-3); font-style: italic; margin-top: auto; }
 
 /* ---------- Re-entry card ---------- */
@@ -1318,12 +1327,12 @@ p { margin: 0; }
 }
 .marquee__track {
   display: inline-flex; gap: 48px;
-  padding: 14px 0;
+  padding: 22px 0;
   white-space: nowrap;
   animation: marquee 38s linear infinite;
 }
 .marquee__track span {
-  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em;
+  font-family: var(--mono); font-size: 14px; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--text-3);
   display: inline-flex; align-items: center; gap: 48px;
 }
@@ -1360,7 +1369,12 @@ p { margin: 0; }
   padding: 32px 28px;
   display: flex; flex-direction: column; gap: 12px;
   min-height: 200px;
+  transition: background .35s var(--ease-card), color .35s var(--ease-card);
 }
+.aud:hover { background: var(--lime); color: #0d0d0d; }
+.aud:hover .aud__h { color: #0d0d0d; }
+.aud:hover .aud__b { color: #0d0d0db3; }
+.aud:hover .eye[data-tone="muted"] { color: #0d0d0d; }
 .aud__h { font-size: 19px; font-weight: 500; letter-spacing: -0.015em; }
 .aud__b { font-size: 14.5px; line-height: 1.6; color: var(--text-2); }
 
@@ -1790,28 +1804,50 @@ p { margin: 0; }
 
 /* ---------- Marquee (sits under the lime hero, dark strip) ---------- */
 .marquee--ink {
-  background: transparent;
+  background: var(--bg);
   color: var(--text-3);
 }
 
-/* ---------- Final CTA eye: bottom-right corner, 2x size, solid black ---------- */
+/* ---------- Final CTA eye: solid black, right portion (desktop) / bottom (mobile) ---------- */
 .cta-lime__bg {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  top: auto;
-  transform: none;
-  width: min(36vw, 640px);
+  top: 50%;
+  left: 75%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  width: min(42vw, 528px);
   height: auto;
   aspect-ratio: 1;
   opacity: 1;
   pointer-events: none;
+  z-index: 0;
 }
 .cta-lime__bg .eye__cell { opacity: 0; }
-.cta-lime__eye, .cta-lime__eye.eye { color: #000; }
-.cta-lime__eye { transform: translateY(20%); }
+.cta-lime__eye, .cta-lime__eye.eye { color: #0d0d0d; }
+.cta-lime__eye { transform: none; }
+@media (max-width: 1080px) {
+  .cta-lime {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 56px 0 28px;
+  }
+  .cta-lime__bg {
+    position: relative;
+    top: auto; left: auto; right: auto; bottom: auto;
+    transform: none;
+    margin: 32px auto 0;
+    width: min(86vw, 540px);
+  }
+}
 @media (max-width: 720px) {
-  .cta-lime__bg { right: 0; bottom: 0; width: 220px; opacity: 1; }
+  .cta-lime { padding: 48px 0 20px; }
+  .cta-lime__bg {
+    width: 86vw;
+    margin-top: 24px;
+  }
 }
 
 /* Center the final two dark sections as complete blocks inside the site frame. */

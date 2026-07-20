@@ -1841,7 +1841,8 @@ p { margin: 0; }
     align-items: stretch;
     justify-content: flex-start;
     min-height: auto;
-    padding: 56px 0 28px;
+    /* bottom gap under the eye == its left/right gap (7vw) */
+    padding: 56px 0 7vw;
   }
   .cta-lime__bg {
     position: relative;
@@ -1852,7 +1853,7 @@ p { margin: 0; }
   }
 }
 @media (max-width: 720px) {
-  .cta-lime { padding: 48px 0 20px; }
+  .cta-lime { min-height: auto; padding: 48px 0 7vw; }  /* eye's bottom gap == side gap */
   .cta-lime__bg {
     width: 86vw;
     margin-top: 24px;

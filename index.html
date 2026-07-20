@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keen — All agents in sight</title>
+<meta name="description" content="Keen is the persistent mission control for AI-native developers. See every coding agent, remember every mission, and know what needs your attention.">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+<div class="site-frame" aria-hidden="true"></div>
+
+<!-- ============================================================
+     01 — NAV
+============================================================ -->
+<nav class="nav">
+  <div class="container nav__inner">
+    <a class="brand" href="#top" aria-label="Keen">
+      <span class="eye brand__mark" data-tone="lime" data-pose="open" data-animate="always" data-nav-eye aria-hidden="true"></span>
+      <span class="brand__name">Keen</span>
+    </a>
+    <div class="nav__links">
+      <a href="#product">Product</a>
+      <a href="#memory">Memory</a>
+      <a href="#integrations">Integrations</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav__cta">
+      <a class="btn btn--secondary" href="#action">See it in action</a>
+      <a class="btn btn--primary" href="#early-access">Get early access</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============================================================
+     02 — HERO (full-bleed lime)
+============================================================ -->
+<section class="hero" id="action">
+  <div class="hero__panes" aria-hidden="true">
+    <div class="hero__pane hero__pane--dark"></div>
+    <div class="hero__pane hero__pane--lime"></div>
+  </div>
+  <div class="container hero__inner">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <span class="eyebrow">All agents in sight</span>
+        <h1 class="hero__display">
+          <span class="row">Agentic chaos.</span>
+          <span class="row hero__display--dim">Under control.</span>
+        </h1>
+        <p class="hero__lede">
+          Keen is the persistent mission control for AI-native developers.
+          See every coding agent, understand what needs your attention, and preserve the decisions,
+          progress and context behind every project — even as sessions, terminals and providers change.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#early-access">
+            Get early access
+            <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--secondary" href="#transformation">See Keen in action</a>
+        </div>
+        <div class="hero__micro">Built for macOS. Works with the tools you already use.</div>
+      </div>
+
+      <!-- Hero: the Keen app on a Mac — panel drops from the menu bar, terminals stack with depth -->
+      <div class="hero__stage reveal">
+        <div class="desk" data-desk>
+          <!-- desktop menu bar -->
+          <div class="desk__bar">
+            <span class="desk__apple" aria-hidden="true"></span>
+            <span class="desk__menu desk__menu--brand"><span class="eye desk__menu-mark" data-tone="ink" data-pose="open" data-animate="always" aria-hidden="true"></span>Keen</span>
+            <span class="desk__menu">File</span>
+            <span class="desk__menu">Edit</span>
+            <span class="desk__menu">Window</span>
+            <span class="desk__bar-spacer"></span>
+            <span class="desk__clock">9:41</span>
+          </div>
+
+          <div class="desk__stage">
+            <!-- background terminal windows (faded, with depth) -->
+            <div class="twin twin--bg twin--g1" data-term="g1" aria-hidden="true">
+              <div class="twin__bar"><span class="twin__dots"><i></i><i></i><i></i></span><span class="twin__name">gemini · optimize-queries</span></div>
+              <div class="twin__body">
+                <span class="tln"><i class="tdot"></i>Analyzing the slow queries.</span>
+                <span class="tln"><i class="tdot"></i>Read(schema.prisma)<span class="tmeta">1.2 KB</span></span>
+                <span class="tln"><i class="tdot"></i>Edit(src/db/queries.ts)<span class="tmeta">+8 −23</span></span>
+              </div>
+            </div>
+            <div class="twin twin--bg twin--g2" data-term="g2" aria-hidden="true">
+              <div class="twin__bar"><span class="twin__dots"><i></i><i></i><i></i></span><span class="twin__name">codex · backend-server</span></div>
+              <div class="twin__body">
+                <span class="tln"><i class="tdot"></i>Building the REST endpoints.</span>
+                <span class="tln"><i class="tdot"></i>Write(src/routes/users.ts)<span class="tmeta">47 lines</span></span>
+                <span class="tln"><i class="tdot"></i>Bash(npm run build)<span class="tmeta tmeta--ok">ok</span></span>
+              </div>
+            </div>
+
+            <!-- front terminal (opaque, IDE-like) -->
+            <div class="twin twin--front" data-term="front" aria-hidden="true">
+              <div class="twin__bar"><span class="twin__dots"><i></i><i></i><i></i></span><span class="twin__name">claude · fix-auth-bug</span></div>
+              <div class="twin__body twin__body--lg">
+                <span class="tln tln--head"><i class="tdot tdot--ok"></i>Build complete. Ready to deploy.</span>
+                <span class="tln tln--indent tln--muted">Searched for 3 environments <span class="tdim">(⌃O to expand)</span></span>
+                <span class="tln"><i class="tdot tdot--ok"></i>Edit(src/auth/middleware.ts)<span class="tmeta">+3 −1</span></span>
+                <span class="tln"><i class="tdot tdot--ok"></i>Bash(npm test)<span class="tmeta tmeta--ok">8 passed</span></span>
+                <span class="tln tln--done">All done! Fixed the auth bug. 3 files changed.</span>
+                <div class="twin__input"><span class="twin__caret">&gt;</span> Add a mutex around the connection pool to fix the race condition.</div>
+              </div>
+            </div>
+
+            <!-- Keen dropdown panel — drops from the menu bar, centered -->
+            <div class="drop" data-drop>
+              <div class="drop__head">
+                <span class="eye drop__logo" data-tone="lime" data-pose="open" data-animate="always" aria-hidden="true"></span>
+                <span class="drop__title">SESSIONS</span>
+                <span class="drop__count" data-drop-count>3 active</span>
+                <span class="drop__icons" aria-hidden="true"><span class="app__ico app__ico--sound"></span><span class="app__ico app__ico--gear"></span></span>
+              </div>
+              <div class="drop__body">
+
+                <!-- monitor -->
+                <div class="dview is-active" data-dview="monitor">
+                  <div class="srow">
+                    <span class="eye srow__eye" data-tone="lime" data-pose="open" data-animate="always" aria-hidden="true"></span>
+                    <div class="srow__main">
+                      <div class="srow__top">
+                        <span class="srow__title">fix auth bug</span>
+                        <span class="tag tag--claude">Claude</span>
+                        <span class="tag">iTerm</span>
+                        <span class="srow__time">27m</span>
+                      </div>
+                      <div class="srow__sub">You: fix the auth bug in middleware</div>
+                      <div class="srow__tool"><b class="srow__tool-name">Writing</b> middleware.ts</div>
+                    </div>
+                  </div>
+                  <div class="srow">
+                    <span class="srow__dot" data-state="working"></span>
+                    <div class="srow__main">
+                      <div class="srow__top">
+                        <span class="srow__title">backend server</span>
+                        <span class="tag tag--codex">Codex</span>
+                        <span class="tag">Terminal</span>
+                        <span class="srow__time">1h</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="srow">
+                    <span class="srow__dot" data-state="review"></span>
+                    <div class="srow__main">
+                      <div class="srow__top">
+                        <span class="srow__title">optimize queries</span>
+                        <span class="tag tag--gemini">Gemini</span>
+                        <span class="tag">Ghostty</span>
+                        <span class="srow__time">5h</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- question -->
+                <div class="dview" data-dview="ask">
+                  <div class="ask">
+                    <div class="ask__head"><span class="ask__mark"></span>Claude asks</div>
+                    <div class="ask__q">Which deployment target?</div>
+                    <button class="ask__opt" type="button"><span class="ask__key">⌘1</span>Production</button>
+                    <button class="ask__opt" type="button"><span class="ask__key">⌘2</span>Staging</button>
+                    <button class="ask__opt" type="button"><span class="ask__key">⌘3</span>Local only</button>
+                  </div>
+                </div>
+
+                <!-- done -->
+                <div class="dview" data-dview="done">
+                  <div class="srow">
+                    <span class="eye srow__eye" data-tone="lime" data-pose="check" aria-hidden="true"></span>
+                    <div class="srow__main">
+                      <div class="srow__top">
+                        <span class="srow__title">fix auth bug</span>
+                        <span class="tag tag--claude">Claude</span>
+                        <span class="tag">iTerm</span>
+                        <span class="srow__time">28m</span>
+                      </div>
+                      <div class="srow__sub">You: fix the auth bug in middleware</div>
+                      <div class="srow__tool srow__tool--done">Done — click to jump</div>
+                    </div>
+                  </div>
+                  <div class="srow">
+                    <span class="srow__dot" data-state="working"></span>
+                    <div class="srow__main">
+                      <div class="srow__top">
+                        <span class="srow__title">backend server</span>
+                        <span class="tag tag--codex">Codex</span>
+                        <span class="tag">Terminal</span>
+                        <span class="srow__time">1h</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="srow">
+                    <span class="srow__dot" data-state="review"></span>
+                    <div class="srow__main">
+                      <div class="srow__top">
+                        <span class="srow__title">optimize queries</span>
+                        <span class="tag tag--gemini">Gemini</span>
+                        <span class="tag">Ghostty</span>
+                        <span class="srow__time">5h</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- animated cursor (moves like the Vibe Island demo) -->
+            <div class="cursor" data-cursor aria-hidden="true">
+              <svg viewBox="0 0 12 18" width="19" height="27"><path d="M1.2 1L11 10.6l-4.4.3 2.5 4.9-2 1L4.6 12 1.2 15.2z" fill="#fff" stroke="#0d0d0d" stroke-width="1.2" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee strip (right under the hero) -->
+<div class="marquee marquee--ink" aria-hidden="true">
+  <div class="marquee__track">
+    <span>See every agent</span><span>Remember every mission</span><span>Know what needs you</span><span>Persistent project memory</span><span>Cross-provider continuity</span><span>Exact terminal jumping</span>
+    <span>See every agent</span><span>Remember every mission</span><span>Know what needs you</span><span>Persistent project memory</span><span>Cross-provider continuity</span><span>Exact terminal jumping</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     03 — AUDIENCE QUALIFIER
+============================================================ -->
+<section class="section section--normal" id="product">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Built for the moment</span>
+      <h2 class="h-section">
+        Built for the moment<br>you stop using AI<br>and start <span style="color:var(--lime)">directing it.</span>
+      </h2>
+    </div>
+    <div class="split">
+      <div class="split__head reveal">
+        <p class="lede">
+          Keen is for developers, indie hackers and technical founders who no longer run
+          one occasional AI conversation.
+        </p>
+        <p class="body" style="margin-top:18px">
+          They delegate research, implementation, testing and debugging across multiple agents,
+          projects and terminals.
+        </p>
+      </div>
+      <div class="reveal">
+        <ul class="q-list">
+          <li>Multiple agents, at once.</li>
+          <li>Multiple projects, in parallel.</li>
+          <li>Multiple terminals, providers and machines.</li>
+          <li>One place to keep command.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     04 — INTEGRATIONS
+============================================================ -->
+<section class="section section--normal" id="integrations">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Works across your stack</span>
+      <h2 class="h-block">Your agents can live in different tools. Keen connects their work into one continuous operational view.</h2>
+    </div>
+  </div>
+  <div class="flush reveal">
+    <div class="wall">
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.71 15.96l4.72-2.65.08-.23-.08-.13h-.23l-.79-.05-2.7-.07-2.33-.1-2.27-.12-.57-.12-.53-.7.05-.35.48-.32.69.06 1.51.1 2.28.16 1.65.1 2.45.25h.39l.05-.16-.13-.1-.1-.1L6.97 9.84l-2.55-1.69-1.34-.97-.72-.49-.36-.46-.16-1.01.66-.72.88.06.22.06.9.69 1.9 1.47 2.49 1.84.36.3.15-.1.02-.07-.16-.27-1.36-2.45-1.44-2.49-.64-1.03-.17-.62-.1-.73L6.29.13 6.7 0l.99.13.42.36.62 1.42 1 2.23 1.55 3.03.46.9.24.83.09.25h.16v-.14l.13-1.71.24-2.09.23-2.7.08-.76.38-.91.75-.49.58.28.48.69-.07.44-.29 1.85-.56 2.9-.36 1.94h.21l.24-.24.99-1.31 1.65-2.06.73-.82.85-.9.55-.43h1.03l.76 1.13-.34 1.17-1.06 1.35-.88 1.14-1.26 1.7-.79 1.36.07.11.19-.02 2.85-.61 1.54-.28 1.84-.31.83.39.09.4-.33.8-1.97.49-2.3.46-3.44.81-.04.03.05.06 1.55.15.66.04h1.62l3.02.22.79.52.47.64-.08.49-1.21.62-1.64-.39-3.82-.91-1.31-.33h-.18v.11l1.09 1.07 2 1.81 2.51 2.33.13.58-.32.45-.34-.05-2.2-1.66-.85-.75-1.92-1.62h-.13v.17l.45.65 2.34 3.52.12 1.08-.17.35-.61.21-.67-.12-1.37-1.92L14.38 17.96l-1.14-1.94-.14.08-.67 7.25-.32.37-.73.28-.6-.46-.32-.75.32-1.47.39-1.92.32-1.53.28-1.9.17-.63-.01-.04h-.14l-1.43 1.97-2.18 2.94-1.72 1.85-.41.16-.72-.37.07-.66.4-.59 2.39-3.04 1.44-1.88.93-1.09-.01-.16h-.05l-6.34 4.12-1.13.15-.49-.46.06-.75.23-.24 1.91-1.31Z"/></svg></span> Claude Code</div>
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Codex</div>
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9l-3 3 3 3M15 9l3 3-3 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> OpenCode</div>
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z" stroke-linejoin="round"/></svg></span> Gemini CLI</div>
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M11.5.13L1.9 5.68a.84.84 0 0 0-.42.72v11.2c0 .3.16.57.42.72l9.6 5.55a1 1 0 0 0 1 0l9.6-5.55a.84.84 0 0 0 .42-.72V6.4a.84.84 0 0 0-.42-.72L12.5.13a1 1 0 0 0-1 0z"/></svg></span> Cursor</div>
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h18v14H3z"/><path d="M7 9l3 3-3 3M14 9l3 3-3 3" stroke-linecap="round"/></svg></span> VS Code</div>
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="13" rx="1"/><path d="M3 17l4 3M21 17l-4 3M9 21h6" stroke-linecap="round"/></svg></span> Terminal</div>
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16v12H4z"/><path d="M7 10l3 3-3 3M13 10l3 3-3 3" stroke-linecap="round"/></svg></span> Ghostty</div>
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12h8" stroke-linecap="round"/></svg></span> iTerm</div>
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9-9-4-9-9zm4-1l4 4 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Warp</div>
+      <div class="wall__cell"><span class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h8M8 15h5" stroke-linecap="round"/></svg></span> Herdr</div>
+      <div class="wall__cell"><span class="glyph mono" style="font-size:11px; letter-spacing:.06em">+</span> More coming</div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee already moved to right under the hero -->
+
+<!-- ============================================================
+     05 — THE PROBLEM
+============================================================ -->
+<section class="section section--normal">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The new bottleneck</span>
+      <h2 class="h-section">
+        Your agents can work in parallel.<br>
+        Your <span style="color:var(--lime)">attention</span> can't.
+      </h2>
+    </div>
+
+    <div class="split">
+      <div class="split__head reveal">
+        <p class="lede">
+          One agent is waiting for permission.
+          Another completed its task in a terminal you forgot was open.
+          A third started implementing an approach that another agent already rejected yesterday.
+        </p>
+        <p class="body" style="margin-top:18px">
+          The work is moving faster — but its context is scattered across conversations,
+          providers, repositories, windows and machines.
+        </p>
+        <p class="body" style="margin-top:24px">
+          <b style="color:var(--text)">This is agentic chaos.</b>
+          Not too little intelligence. Too much disconnected execution.
+        </p>
+      </div>
+      <div class="reveal">
+        <ul class="q-list">
+          <li>What was each agent doing?</li>
+          <li>Which approach was approved?</li>
+          <li>What already failed?</li>
+          <li>Which session owns the task?</li>
+          <li>Where should the work continue?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     06 — THE TRANSFORMATION
+============================================================ -->
+<section class="section section--normal" id="transformation">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">From sessions to missions</span>
+      <h2 class="h-section">Sessions end.<br><span style="color:var(--lime)">Missions</span> continue.</h2>
+      <p class="lede">
+        Most tools organize agentic work as separate sessions.
+        Keen organizes it around the mission. Every Claude, Codex or OpenCode session
+        can become part of one persistent project thread — carrying forward its objective,
+        decisions, constraints, progress and unresolved work.
+      </p>
+    </div>
+
+    <!-- Second scene: same animation, different context (the cycle, reprised) -->
+    <div class="reveal" style="margin-bottom: 48px;">
+      <div class="scene scene--embedded" data-mock>
+        <div class="scene__island" data-island>
+          <div class="island__head">
+            <span class="eye island__mark" data-tone="lime" data-pose="open" aria-hidden="true"></span>
+            <span class="island__title">Keen</span>
+            <span class="island__count" data-island-count>mission · rebuild auth</span>
+          </div>
+          <div class="island__line">
+            <span class="island__dot" data-island-dot data-state="working"></span>
+            <span class="island__agent" data-island-agent>OpenCode</span>
+            <span class="island__state" data-island-state data-state="working">Working</span>
+          </div>
+        </div>
+        <div class="scene__panes">
+          <div class="mock__stage pane is-active" data-step="terminal">
+            <div class="pane__chrome">
+              <div class="pane__dots"><span></span><span></span><span></span></div>
+              <div class="pane__title">opencode · zsh</div>
+              <div class="pane__tag" data-state="working">Working</div>
+            </div>
+            <div class="term">
+              <span class="term__line"><span class="term__prompt">$</span> <span class="term__cmd">npm run test:integration</span></span>
+              <span class="term__line"><span class="term__out">  ✓ rejects expired tokens (24ms)</span></span>
+              <span class="term__line"><span class="term__out">  ✓ signs new session cookie (31ms)</span></span>
+              <span class="term__line"><span class="term__out">  ⨯ refresh-token rotation fails on edge<span class="term__cursor"></span></span></span>
+            </div>
+          </div>
+          <div class="mock__stage pane" data-step="diff">
+            <div class="pane__chrome">
+              <div class="pane__dots"><span></span><span></span><span></span></div>
+              <div class="pane__title">VS Code · middleware/auth.ts</div>
+              <div class="pane__tag" data-state="attention">Codex</div>
+            </div>
+            <div class="diff">
+              <div class="diff__head"><span>middleware/auth.ts</span><span>+12 −1</span></div>
+              <span class="diff__ln" data-kind="ctx"><span class="g"> 22</span>export async function sessionMiddleware(req) {</span>
+              <span class="diff__ln" data-kind="add"><span class="g"> 23</span>+  const cookie = readSessionCookie(req);</span>
+              <span class="diff__ln" data-kind="add"><span class="g"> 24</span>+  if (!cookie) return redirect("/login");</span>
+              <span class="diff__ln" data-kind="ctx"><span class="g"> 25</span>  return handle(req);</span>
+            </div>
+          </div>
+          <div class="mock__stage pane" data-step="approval">
+            <div class="pane__chrome">
+              <div class="pane__dots"><span></span><span></span><span></span></div>
+              <div class="pane__title">Keen · Codex needs permission</div>
+              <div class="pane__tag" data-state="attention">Decision</div>
+            </div>
+            <div class="prompt">
+              <div class="prompt__head"><span class="dot"></span>Permission required</div>
+              <div class="prompt__title">Continue implementing the refresh-token rotation?</div>
+              <div class="prompt__body">Codex wants to add rotation logic that touches the database.</div>
+              <div class="prompt__conflict">⨯ Matches the constraint "Server-side cookies only" — approved yesterday.</div>
+              <div class="prompt__actions">
+                <button class="prompt__btn prompt__btn--danger" type="button">Reject</button>
+                <button class="prompt__btn" type="button">Review diff</button>
+                <button class="prompt__btn prompt__btn--primary" type="button">Approve once</button>
+              </div>
+            </div>
+          </div>
+          <div class="mock__stage pane" data-step="completion">
+            <div class="pane__chrome">
+              <div class="pane__dots"><span></span><span></span><span></span></div>
+              <div class="pane__title">Keen · Claude · mission ready</div>
+              <div class="pane__tag" data-state="review">Ready for review</div>
+            </div>
+            <div class="done">
+              <div class="done__head">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg>
+                Mission: Rebuild Authentication
+              </div>
+              <div class="done__title">Six tests pass. One refresh-token test still failing.</div>
+              <ul class="done__list">
+                <li>Architecture investigated</li>
+                <li>Server-side cookies approved</li>
+                <li>Local storage rejected</li>
+                <li>Database changes prohibited</li>
+              </ul>
+              <div class="done__next"><b>Recommended next action —</b> Review the migration before resuming.</div>
+            </div>
+          </div>
+        </div>
+        <div class="scene__strip">
+          <div class="mock__step"></div>
+          <div class="mock__step"></div>
+          <div class="mock__step"></div>
+          <div class="mock__step"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mission-grid reveal">
+      <div class="mission">
+        <span class="mission__label">Before Keen</span>
+        <div class="mission__title">Three sessions. No shared understanding.</div>
+        <ul class="mission__list">
+          <li><b style="color:var(--text)">Claude Session 4</b> — investigated authentication.</li>
+          <li><b style="color:var(--text)">Codex Session 7</b> — implemented authentication.</li>
+          <li><b style="color:var(--text)">OpenCode Session 2</b> — tests failing.</li>
+        </ul>
+        <div class="mission__note">Each session remembers only its own thread.</div>
+      </div>
+
+      <div class="mission mission--keen">
+        <span class="mission__label">With Keen</span>
+        <div class="mission__title">Mission: Rebuild Authentication</div>
+        <ul class="mission__list">
+          <li>Architecture investigated</li>
+          <li>Server-side cookies approved</li>
+          <li>Local storage rejected</li>
+          <li>Database changes prohibited</li>
+          <li>Middleware implementation completed</li>
+          <li>One refresh-token test still failing</li>
+        </ul>
+        <div class="mission__next">
+          <b>Recommended next action —</b> Review the middleware diff before continuing.
+        </div>
+      </div>
+    </div>
+
+    <p class="body reveal" style="margin-top:36px; text-align:center; font-family:var(--mono); font-size:13px; letter-spacing:.04em; color:var(--text-3)">
+      One mission. Every decision intact.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     07 — THREE CORE PILLARS
+============================================================ -->
+<section class="section">
+  <div class="container" style="padding-top:80px; padding-bottom:32px;">
+    <div class="section-head reveal">
+      <span class="eyebrow">Three core pillars</span>
+    </div>
+  </div>
+  <div class="flush reveal">
+    <div class="pillars">
+      <div class="pillar">
+        <span class="eye pillar__mark" data-tone="muted" data-pose="open" data-pillar="blink" aria-hidden="true"></span>
+        <h3 class="pillar__title">See every agent</h3>
+        <p class="pillar__body">
+          Monitor active, waiting, blocked, completed and failed agents across projects,
+          terminals and providers. No more searching through windows to understand what is still running.
+        </p>
+      </div>
+      <div class="pillar">
+        <span class="eye pillar__mark" data-tone="muted" data-pose="open" data-pillar="scan" aria-hidden="true"></span>
+        <h3 class="pillar__title">Remember every mission</h3>
+        <p class="pillar__body">
+          Keen preserves the context that normally disappears between sessions.
+          Objectives, constraints, decisions, rejected approaches, failures and unresolved
+          questions remain connected to the project. Your next session does not begin from zero.
+        </p>
+      </div>
+      <div class="pillar">
+        <span class="eye pillar__mark" data-tone="muted" data-pose="attention" data-pillar="attentive" aria-hidden="true"></span>
+        <h3 class="pillar__title">Know what needs you</h3>
+        <p class="pillar__body">
+          Keen separates activity from attention. Working agents remain quiet.
+          Decisions, failures, contradictions and completed work rise to the surface
+          when human judgment is actually required.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     08 — PERSISTENT PROJECT MEMORY
+============================================================ -->
+<section class="section section--normal" id="memory">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Keen thread</span>
+      <h2 class="h-section">
+        Your agents remember the prompt.<br>
+        <span style="color:var(--lime)">Keen</span> remembers the project.
+      </h2>
+      <p class="lede">
+        Claude remembers its Claude conversation. Codex remembers its Codex thread.
+        Your terminal remembers the process running inside it.
+        Keen remembers how all of them contributed to the same body of work.
+      </p>
+    </div>
+
+    <div class="thread reveal">
+      <div class="thread__head"><span class="live"></span>project · authentication · persistent thread</div>
+      <div class="thread__list">
+        <div class="thread__item"><span class="n">01</span><span><b>Original missions and objectives</b> — what the project set out to do.</span></div>
+        <div class="thread__item"><span class="n">02</span><span><b>Agents and providers involved</b> — who did what, where.</span></div>
+        <div class="thread__item"><span class="n">03</span><span><b>Important decisions</b> — and the reasoning behind them.</span></div>
+        <div class="thread__item"><span class="n">04</span><span><b>Constraints and rejected approaches</b> — what not to try again.</span></div>
+        <div class="thread__item"><span class="n">05</span><span><b>Files, branches and worktrees touched</b> — across every agent.</span></div>
+        <div class="thread__item"><span class="n">06</span><span><b>Permissions and human interventions</b> — when you said yes or no.</span></div>
+        <div class="thread__item"><span class="n">07</span><span><b>Failed attempts and successful fixes</b> — both preserved.</span></div>
+        <div class="thread__item"><span class="n">08</span><span><b>Current blockers, ready-for-review, next actions</b>.</span></div>
+      </div>
+    </div>
+
+    <p class="body reveal" style="margin-top:28px; font-family:var(--mono); font-size:13px; letter-spacing:.04em; color:var(--text-3)">
+      The memory belongs to the project. Not to one provider. Not to one terminal. Not to one session.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     09 — ATTENTION
+============================================================ -->
+<section class="section section--normal">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Only the signal</span>
+      <h2 class="h-section">
+        More agents shouldn't mean<br>more <span style="color:var(--lime)">interruptions.</span>
+      </h2>
+      <p class="lede">
+        Most agent tools tell you that something happened. Keen helps you understand whether it matters.
+      </p>
+    </div>
+
+    <div class="flush reveal">
+      <div class="attn-grid">
+        <div class="attn" data-kind="activity">
+          <span class="eye attn__icon" data-tone="muted" data-pose="pulse" aria-hidden="true"></span>
+          <span class="attn__label">Activity</span>
+          <h3 class="attn__title">An agent is running tests.</h3>
+          <p class="attn__body">No interruption required. Keen records progress quietly and surfaces it only when you look.</p>
+        </div>
+        <div class="attn" data-kind="attention">
+          <span class="eye attn__icon" data-tone="muted" data-pose="alert" aria-hidden="true"></span>
+          <span class="attn__label">Attention</span>
+          <h3 class="attn__title">An agent needs permission.</h3>
+          <p class="attn__body">Modifying production configuration requires a human decision. Keen brings it to the front.</p>
+        </div>
+        <div class="attn" data-kind="risk">
+          <span class="eye attn__icon" data-tone="muted" data-pose="x" aria-hidden="true"></span>
+          <span class="attn__label">Risk</span>
+          <h3 class="attn__title">A change conflicts with a constraint.</h3>
+          <p class="attn__body">A new implementation collides with a recorded project constraint. Keen flags it before you continue.</p>
+        </div>
+        <div class="attn" data-kind="completion">
+          <span class="eye attn__icon" data-tone="muted" data-pose="check" aria-hidden="true"></span>
+          <span class="attn__label">Completion</span>
+          <h3 class="attn__title">A mission is ready for evaluation.</h3>
+          <p class="attn__body">Changes, remaining issues and next actions are already summarized for you.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="body reveal" style="margin-top:32px; font-family:var(--mono); font-size:13px; letter-spacing:.04em; color:var(--text-3)">
+      More execution. Less cognitive noise.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     10 — RE-ENTRY AND RECOVERY
+============================================================ -->
+<section class="section section--normal">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Return with the thread intact</span>
+      <h2 class="h-section">
+        Close the laptop.<br>Keep the <span style="color:var(--lime)">mission.</span>
+      </h2>
+      <p class="lede">
+        When you return after a restart, a closed terminal or two days away from the project,
+        Keen gives you more than a list of old sessions. It gives you a re-entry brief.
+      </p>
+    </div>
+
+    <div class="reentry reveal">
+      <div class="reentry__chrome">
+        <span class="live"></span>
+        keen · re-entry brief · today, 9:14am
+      </div>
+      <div class="reentry__body">
+        <div class="reentry__hi">Welcome back.</div>
+        <p class="reentry__brief">
+          You were <b>rebuilding authentication</b> without changing the database schema.
+          Claude investigated the architecture and recommended secure server-side cookies.
+          Codex implemented the middleware but introduced a migration that conflicts with the original constraint.
+        </p>
+        <div class="reentry__stats">
+          <div class="reentry__stat"><div class="reentry__stat-n">6</div><div class="reentry__stat-l">tests pass</div></div>
+          <div class="reentry__stat"><div class="reentry__stat-n">1</div><div class="reentry__stat-l">still failing</div></div>
+          <div class="reentry__stat"><div class="reentry__stat-n">4</div><div class="reentry__stat-l">decisions intact</div></div>
+        </div>
+        <div class="reentry__next">
+          <b>Recommended next action —</b> Review the migration before resuming implementation.
+        </div>
+        <div class="reentry__actions">
+          <button class="btn btn--secondary" type="button">Open project</button>
+          <button class="btn btn--secondary" type="button">Resume session</button>
+          <button class="btn btn--primary" type="button">Review changes</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="body reveal" style="margin-top:28px; max-width:60ch">
+      Keen does not only help you find the window. It helps you recover your understanding of the work.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     11 — ZERO-MIGRATION CONTROL
+============================================================ -->
+<section class="section section--normal">
+  <div class="container">
+    <div class="split">
+      <div class="split__head reveal">
+        <span class="eyebrow">Keep your tools</span>
+        <h2 class="h-section">
+          Keen lives <span style="color:var(--lime)">above</span> your workflow.<br>Not instead of it.
+        </h2>
+      </div>
+      <div class="reveal">
+        <p class="lede">
+          Keen is not another IDE, terminal or proprietary agent runtime.
+          You do not need to move every agent into a new environment.
+        </p>
+        <ul class="q-list reveal" style="margin-top:24px">
+          <li>Use <b style="color:var(--text)">Claude Code</b> for research.</li>
+          <li>Use <b style="color:var(--text)">Codex</b> for implementation.</li>
+          <li>Use <b style="color:var(--text)">OpenCode</b> for testing.</li>
+          <li>Use <b style="color:var(--text)">Herdr</b> or <b style="color:var(--text)">tmux</b> for persistent processes.</li>
+          <li>Use <b style="color:var(--text)">Cursor</b> or <b style="color:var(--text)">VS Code</b> for review.</li>
+        </ul>
+        <p class="body reveal" style="margin-top:24px; font-family:var(--mono); font-size:13px; letter-spacing:.04em; color:var(--text-3)">
+          Your workflow stays yours.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     12 — POSITIONING COMPARISON
+============================================================ -->
+<section class="section section--normal">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">More than an agent notifier</span>
+      <h2 class="h-section">
+        Monitoring shows activity.<br>
+        <span style="color:var(--lime)">Keen</span> preserves continuity.
+      </h2>
+    </div>
+
+    <div class="reveal" style="border:1px solid var(--line); border-radius:var(--r-xl); overflow:hidden;">
+      <div class="compare">
+        <div class="compare__row">
+          <div class="compare__cell">
+            <span class="compare__label">Agent notifier</span>
+            <div class="compare__text">Tells you Claude finished.</div>
+          </div>
+          <div class="compare__cell compare__cell--keen">
+            <span class="compare__label">Keen</span>
+            <div class="compare__text">Shows which mission finished, what changed, what remains unresolved and what deserves your attention next.</div>
+          </div>
+        </div>
+        <div class="compare__row">
+          <div class="compare__cell">
+            <span class="compare__label">Session dashboard</span>
+            <div class="compare__text">Organizes active conversations.</div>
+          </div>
+          <div class="compare__cell compare__cell--keen">
+            <span class="compare__label">Keen</span>
+            <div class="compare__text">Connects multiple conversations into one persistent project memory.</div>
+          </div>
+        </div>
+        <div class="compare__row">
+          <div class="compare__cell">
+            <span class="compare__label">Terminal multiplexer</span>
+            <div class="compare__text">Keeps processes alive.</div>
+          </div>
+          <div class="compare__cell compare__cell--keen">
+            <span class="compare__label">Keen</span>
+            <div class="compare__text">Keeps the meaning of the work alive — even when the original process is gone.</div>
+          </div>
+        </div>
+        <div class="compare__row">
+          <div class="compare__cell">
+            <span class="compare__label">Provider history</span>
+            <div class="compare__text">Remembers work completed inside one ecosystem.</div>
+          </div>
+          <div class="compare__cell compare__cell--keen">
+            <span class="compare__label">Keen</span>
+            <div class="compare__text">Preserves continuity across the agents and providers contributing to the same project.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     13 — WHO KEEN IS FOR
+============================================================ -->
+<section class="section section--normal">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Built for AI-native builders</span>
+      <h2 class="h-section">For people directing a <span style="color:var(--lime)">small army.</span></h2>
+    </div>
+
+    <div class="flush reveal">
+      <div class="aud-grid">
+        <div class="aud">
+          <span class="eye aud__icon" data-tone="muted" data-pose="node" aria-hidden="true"></span>
+          <h3 class="aud__h">Solo developers</h3>
+          <p class="aud__b">Delegate research, implementation and testing without losing the reasoning connecting each phase.</p>
+        </div>
+        <div class="aud">
+          <span class="eye aud__icon" data-tone="muted" data-pose="build" aria-hidden="true"></span>
+          <h3 class="aud__h">Indie hackers</h3>
+          <p class="aud__b">Run multiple products and experiments while maintaining a clear history of what every agent changed.</p>
+        </div>
+        <div class="aud">
+          <span class="eye aud__icon" data-tone="muted" data-pose="research" aria-hidden="true"></span>
+          <h3 class="aud__h">Technical founders</h3>
+          <p class="aud__b">Move between engineering, product and business without reconstructing yesterday's coding sessions.</p>
+        </div>
+        <div class="aud">
+          <span class="eye aud__icon" data-tone="muted" data-pose="open" aria-hidden="true"></span>
+          <h3 class="aud__h">Agent power users</h3>
+          <p class="aud__b">Use multiple providers, terminals, worktrees and remote environments while keeping one coherent view of the work.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="body reveal" style="margin-top:36px; max-width:72ch">
+      Keen is not designed for someone occasionally asking ChatGPT a coding question.
+      It is designed for someone increasingly responsible for supervising delegated machine execution.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     14 — PRODUCT PHILOSOPHY
+============================================================ -->
+<section class="section section--loose">
+  <div class="container">
+    <div class="reveal" style="max-width:var(--maxw-prose)">
+      <span class="eyebrow">Product philosophy</span>
+      <h2 class="h-section" style="margin-top:20px">
+        The next generation of software<br>
+        won't be built in <span style="color:var(--lime)">one conversation.</span>
+      </h2>
+      <p class="lede" style="margin-top:28px">
+        It will be built across many agents. Many sessions. Many providers. Many worktrees. Many days.
+      </p>
+      <p class="body" style="margin-top:18px">
+        Without a shared memory layer, every handoff creates drift.
+        Every restart loses context. Every new agent risks repeating or contradicting previous work.
+      </p>
+      <p class="body" style="margin-top:18px">
+        Keen turns fragmented agent activity into a continuous body of work.
+      </p>
+      <p style="margin-top:32px; font-family:var(--mono); font-size:13px; color:var(--text-3); letter-spacing:.04em">
+        More than persistent sessions.
+      </p>
+      <p class="h-block" style="margin-top:6px">
+        <span style="color:var(--lime)">Persistent understanding.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     15 — FUTURE VISION
+============================================================ -->
+<section class="section section--normal">
+  <div class="container">
+    <div class="split">
+      <div class="split__head reveal">
+        <span class="eyebrow">Coding agents today</span>
+        <h2 class="h-section">
+          The memory and attention layer<br>for every agent <span style="color:var(--lime)">tomorrow.</span>
+        </h2>
+      </div>
+      <div class="reveal">
+        <p class="lede">
+          Keen begins where agentic chaos is already visible: coding agents, terminals,
+          repositories, worktrees and development sessions.
+        </p>
+        <p class="body" style="margin-top:18px">
+          Its longer-term direction is broader: one independent control and memory layer
+          for every agent you run.
+        </p>
+        <ul class="q-list reveal" style="margin-top:24px">
+          <li>Research.</li>
+          <li>Design.</li>
+          <li>Engineering.</li>
+          <li>Operations.</li>
+        </ul>
+        <p class="body reveal" style="margin-top:24px; font-family:var(--mono); font-size:13px; letter-spacing:.04em; color:var(--text-3)">
+          All agents in sight. Every mission intact.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     16 — EARLY ACCESS
+============================================================ -->
+<section class="section section--normal" id="pricing">
+  <div class="container" id="early-access">
+    <div class="cta-box reveal">
+      <span class="eyebrow">Get started</span>
+      <h2 class="h-section">Give your agents a <span style="color:var(--lime)">shared memory.</span></h2>
+      <p class="lede">Keen Early Access — built for the age of delegated execution.</p>
+
+      <ul style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 28px; margin:8px 0 20px; max-width:680px">
+        <li style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-2)"><span style="width:5px;height:5px;background:var(--lime);border-radius:1px;margin-top:8px;flex:none"></span>Real-time agent visibility</li>
+        <li style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-2)"><span style="width:5px;height:5px;background:var(--lime);border-radius:1px;margin-top:8px;flex:none"></span>Persistent project threads</li>
+        <li style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-2)"><span style="width:5px;height:5px;background:var(--lime);border-radius:1px;margin-top:8px;flex:none"></span>Cross-session mission continuity</li>
+        <li style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-2)"><span style="width:5px;height:5px;background:var(--lime);border-radius:1px;margin-top:8px;flex:none"></span>Decision and constraint memory</li>
+        <li style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-2)"><span style="width:5px;height:5px;background:var(--lime);border-radius:1px;margin-top:8px;flex:none"></span>Attention-based notifications</li>
+        <li style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-2)"><span style="width:5px;height:5px;background:var(--lime);border-radius:1px;margin-top:8px;flex:none"></span>Context and session recovery</li>
+        <li style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-2)"><span style="width:5px;height:5px;background:var(--lime);border-radius:1px;margin-top:8px;flex:none"></span>Cross-provider project history</li>
+        <li style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-2)"><span style="width:5px;height:5px;background:var(--lime);border-radius:1px;margin-top:8px;flex:none"></span>Exact terminal and project jumping</li>
+        <li style="display:flex; gap:10px; align-items:flex-start; font-size:14px; color:var(--text-2)"><span style="width:5px;height:5px;background:var(--lime);border-radius:1px;margin-top:8px;flex:none"></span>Early access to new integrations</li>
+      </ul>
+
+      <div class="price-row">
+        <div class="price-row__amount">
+          <span class="price-row__price">$0</span>
+          <span class="price-row__unit">/ during early access</span>
+        </div>
+        <div class="price-row__note">
+          <span class="price-row__tick">✓</span> Simple pricing. No per-agent tax.<br>
+          <span class="price-row__muted">Flat plans announced at public launch.</span>
+        </div>
+      </div>
+
+      <div class="hero__ctas" style="margin-top:8px">
+        <a class="btn btn--primary" href="#top">
+          Join the private beta
+          <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="hero__micro">Built for macOS. Works with the tools you already use.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     17 — FAQ
+============================================================ -->
+<section class="section section--normal" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h-section">Frequently asked.</h2>
+    </div>
+
+    <div class="faq reveal" style="max-width:var(--maxw-prose)">
+      <div class="faq__item">
+        <button class="faq__q" type="button">What is Keen?<span class="plus"></span></button>
+        <div class="faq__a"><div class="faq__a-inner">
+          Keen is a persistent mission control and memory layer for developers working with multiple AI coding agents.
+          It shows what every agent is doing while preserving the decisions, context and progress behind each project.
+        </div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button">How is Keen different from an agent notifier?<span class="plus"></span></button>
+        <div class="faq__a"><div class="faq__a-inner">
+          An agent notifier tells you that something happened.
+          Keen connects the event to its mission, project, previous decisions, current state and next action.
+        </div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button">How is Keen different from Vibe Island?<span class="plus"></span></button>
+        <div class="faq__a"><div class="faq__a-inner">
+          Vibe Island is primarily designed to help Mac developers monitor and interact with active coding-agent sessions.
+          Keen expands the problem from session visibility to mission continuity — combining live agent awareness
+          with persistent project memory, so work stays coherent across multiple sessions, agents and providers.
+        </div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button">How is Keen different from Herdr or tmux?<span class="plus"></span></button>
+        <div class="faq__a"><div class="faq__a-inner">
+          Herdr and tmux are designed to manage terminal sessions and keep processes available for reconnection.
+          Keen can work alongside them. Its primary responsibility is preserving project-level meaning:
+          what agents attempted, what was decided, what changed and where the mission should continue.
+        </div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button">Does Keen keep terminal processes alive?<span class="plus"></span></button>
+        <div class="faq__a"><div class="faq__a-inner">
+          Keen is not a terminal multiplexer. Process persistence depends on the terminal or runtime managing the agent.
+          Keen preserves the identity, state and context of the work so the project remains understandable
+          even when the original process is no longer active.
+        </div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button">What does Keen remember?<span class="plus"></span></button>
+        <div class="faq__a"><div class="faq__a-inner">
+          Depending on the integration and privacy settings, Keen can preserve:
+          <ul>
+            <li>Missions and objectives</li>
+            <li>Project constraints</li>
+            <li>Important decisions</li>
+            <li>Rejected approaches</li>
+            <li>Agent and provider information</li>
+            <li>Recent progress</li>
+            <li>Files and branches involved</li>
+            <li>Failures and blockers</li>
+            <li>Current state</li>
+            <li>Recommended next actions</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button">Does Keen run my agents?<span class="plus"></span></button>
+        <div class="faq__a"><div class="faq__a-inner">
+          Keen's first role is to observe, connect and preserve the work happening across your existing tools.
+          It does not require you to replace your IDE, terminal or preferred coding agents.
+        </div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button">Is Keen only for coding agents?<span class="plus"></span></button>
+        <div class="faq__a"><div class="faq__a-inner">
+          The first version is intentionally focused on coding agents and AI-native development workflows.
+          The broader vision is an independent control, attention and memory layer for every agent you run.
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     18 — FINAL CTA (lime panel with animated eye)
+============================================================ -->
+<section class="cta-lime-section" id="final-cta">
+    <div class="cta-lime reveal">
+      <div class="cta-lime__bg" aria-hidden="true">
+        <span class="eye cta-lime__eye" data-tone="ink" data-pose="open" data-animate="always" aria-hidden="true"></span>
+      </div>
+      <div class="container cta-lime__content">
+        <span class="eyebrow eyebrow--ink">All agents in sight</span>
+        <h2 class="cta-lime__display">
+          Your agents are<br>already working.<br>
+          Don't let the mission disappear.
+        </h2>
+        <p class="cta-lime__lede">
+          See every agent. Preserve every important decision. Return to every project with its context intact.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--ink" href="#early-access">
+            Get early access
+            <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ink-ghost" href="#transformation">See how Keen works</a>
+        </div>
+      </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     19 — FOOTER
+============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="eye footer__brand-mark" data-tone="lime" data-pose="open" aria-hidden="true"></div>
+        <div class="footer__brand-name">Keen</div>
+        <p class="footer__tag">All agents in sight. Persistent mission control for agentic work.</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h5>Product</h5>
+          <a href="#product">Overview</a>
+          <a href="#memory">Memory</a>
+          <a href="#integrations">Integrations</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="footer__col">
+          <h5>Resources</h5>
+          <a href="#faq">FAQ</a>
+          <a href="#transformation">How it works</a>
+          <a href="#early-access">Early access</a>
+        </div>
+        <div class="footer__col">
+          <h5>Legal</h5>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© 2026 Keen — Built for the age of delegated execution.</span>
+      <span>macOS · v0.1 early access</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>

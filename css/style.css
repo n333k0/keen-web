@@ -1245,13 +1245,13 @@ p { margin: 0; }
 .cta-box {
   border: 1px solid var(--line);
   border-radius: var(--r-2xl);
-  padding: 32px;
+  padding: 56px;
   background: transparent;
   display: flex; flex-direction: column; align-items: flex-start; gap: 20px;
   width: 100%;
   margin-inline: auto;
 }
-@media (max-width: 720px) { .cta-box { padding: 20px; } }
+@media (max-width: 720px) { .cta-box { padding: 32px; } }
 
 #early-access .cta-box {
   align-items: center;
